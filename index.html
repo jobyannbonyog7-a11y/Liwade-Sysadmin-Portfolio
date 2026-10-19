@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Ricric P. Liwade | System Administrator Portfolio</title>
+  <meta name="description" content="A portfolio introducing the System Administrator profession: roles, skills, tools, and a Linux terminal demo.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Sora:wght@500;600;700;800&family=Figtree:wght@400;500;600;700&family=JetBrains+Mono:wght@400;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <canvas id="sea" aria-hidden="true"></canvas>
+
+  <!-- ========== NAVIGATION ========== -->
+  <header class="site-header">
+    <a href="#home" class="brand" aria-label="Home">
+      <span class="brand-mark">RPL</span>
+      <span class="brand-text">sysadmin<b>.portfolio</b></span>
+    </a>
+    <nav id="nav" aria-label="Main navigation">
+      <a href="#home" data-i18n="nav.home">Home</a>
+      <a href="#roles" data-i18n="nav.roles">Roles</a>
+      <a href="#skills" data-i18n="nav.skills">Skills</a>
+      <a href="#tools" data-i18n="nav.tools">Tools</a>
+      <a href="#terminal" data-i18n="nav.terminal">Terminal</a>
+      <a href="#about" data-i18n="nav.about">About</a>
+    </nav>
+    <div class="lang" role="group" aria-label="Language / Wika">
+      <button data-lang="en" class="active" aria-pressed="true">EN</button>
+      <button data-lang="fil" aria-pressed="false">FIL</button>
+    </div>
+    <button class="menu-btn" id="menuBtn" aria-label="Menu" aria-expanded="false" aria-controls="nav"><i></i><i></i><i></i></button>
+  </header>
+
+  <main>
+    <!-- ========== HOME ========== -->
+    <section id="home" class="hero">
+      <div class="hero-text">
+        <p class="pill" data-i18n="hero.tag">Systems Administration and Maintenance</p>
+        <h1 data-i18n="hero.title">Web-Based System Administrator Career Portfolio</h1>
+        <p class="typed-line"><span data-i18n="hero.lead">A sysadmin keeps</span> <span id="typed" class="typed"></span><span class="caret"></span></p>
+        <p class="lead" data-i18n="hero.intro">System administration is the work of installing, configuring, securing, and maintaining the computers, servers, and networks that people and organizations depend on every day.</p>
+        <div class="actions">
+          <a href="#roles" class="btn primary" data-i18n="hero.cta1">Explore the role</a>
+          <a href="#terminal" class="btn ghost" data-i18n="hero.cta2">Try the Linux terminal</a>
+        </div>
+      </div>
+
+      <!-- Picture frame -->
+      <figure class="frame-wrap" id="frame">
+        <div class="frame">
+          <div class="frame-inner">
+            <img src="images%20093.jpg" alt="Ricric P. Liwade" id="profileImg" onerror="this.style.display='none';this.nextElementSibling.style.display='grid'">
+            <div class="initials" style="display:none">RPL</div>
+            <div class="caustics"></div>
+            <div class="tide"><i class="w1"></i><i class="w2"></i></div>
+            <span class="bub" style="--l:18%;--s:10px;--d:0s"></span><span class="bub" style="--l:34%;--s:6px;--d:1.6s"></span>
+            <span class="bub" style="--l:52%;--s:12px;--d:3.1s"></span><span class="bub" style="--l:70%;--s:7px;--d:.8s"></span>
+            <span class="bub" style="--l:84%;--s:9px;--d:2.4s"></span>
+            <div class="shine"></div>
+          </div>
+        </div>
+        <figcaption>Ricric P. Liwade</figcaption>
+      </figure>
+    </section>
+
+    <section class="intro-strip">
+      <article>
+        <h2 data-i18n="what.title">What does a system administrator do?</h2>
+        <p data-i18n="what.text">Think of a sysadmin as the caretaker of an organization's technology. When everything works, nobody notices. That is the goal: reliable systems, protected data, and people who can do their work without interruption.</p>
+      </article>
+    </section>
+
+    <!-- ========== ROLES ========== -->
+    <section id="roles" class="section">
+      <div class="head">
+        <h2 data-i18n="roles.title">Roles and Responsibilities</h2>
+        <p data-i18n="roles.sub">Tap a card to read more.</p>
+      </div>
+      <div class="grid roles">
+        <button class="card flip" aria-expanded="false"><span class="ico" aria-hidden="true">🖥️</span><h3 data-i18n="r1.t">Installing and maintaining operating systems</h3><p data-i18n="r1.d">Sets up Windows and Linux machines, applies updates and security patches, and keeps every system consistent and supported.</p></button>
+        <button class="card flip" aria-expanded="false"><span class="ico" aria-hidden="true">👤</span><h3 data-i18n="r2.t">Managing user accounts and permissions</h3><p data-i18n="r2.d">Creates and removes accounts, resets passwords, and gives each person only the access they need (least privilege).</p></button>
+        <button class="card flip" aria-expanded="false"><span class="ico" aria-hidden="true">📊</span><h3 data-i18n="r3.t">Monitoring system performance</h3><p data-i18n="r3.d">Watches CPU, memory, disk, and network usage so problems are spotted and fixed before users feel them.</p></button>
+        <button class="card flip" aria-expanded="false"><span class="ico" aria-hidden="true">💾</span><h3 data-i18n="r4.t">Performing backups and recovery</h3><p data-i18n="r4.d">Schedules regular backups, tests restores, and prepares a recovery plan so data survives failures and mistakes.</p></button>
+        <button class="card flip" aria-expanded="false"><span class="ico" aria-hidden="true">🔧</span><h3 data-i18n="r5.t">Troubleshooting hardware and software issues</h3><p data-i18n="r5.d">Finds the root cause of errors, crashes, and slowdowns, then fixes them and documents the solution.</p></button>
+        <button class="card flip" aria-expanded="false"><span class="ico" aria-hidden="true">🛡️</span><h3 data-i18n="r6.t">Securing systems and networks</h3><p data-i18n="r6.d">Configures firewalls, enforces strong authentication, and reviews logs to protect against threats.</p></button>
+      </div>
+    </section>
+
+    <!-- ========== SKILLS ========== -->
+    <section id="skills" class="section alt">
+      <div class="head">
+        <h2 data-i18n="skills.title">Technical and Professional Skills</h2>
+        <div class="tabs" role="tablist">
+          <button class="active" data-filter="all" data-i18n="skills.all">All</button>
+          <button data-filter="tech" data-i18n="skills.tech">Technical</button>
+          <button data-filter="pro" data-i18n="skills.pro">Professional</button>
+        </div>
+      </div>
+      <div class="skills">
+        <div class="skill" data-type="tech" data-level="90"><div><h3 data-i18n="s1.t">Operating system administration</h3><p data-i18n="s1.d">Managing Windows Server and Linux.</p></div><div class="bar"><i></i></div></div>
+        <div class="skill" data-type="tech" data-level="85"><div><h3 data-i18n="s2.t">Networking</h3><p data-i18n="s2.d">TCP/IP, DNS, DHCP, and routing basics.</p></div><div class="bar"><i></i></div></div>
+        <div class="skill" data-type="tech" data-level="75"><div><h3 data-i18n="s3.t">Scripting and automation</h3><p data-i18n="s3.d">Bash and PowerShell to automate routine tasks.</p></div><div class="bar"><i></i></div></div>
+        <div class="skill" data-type="tech" data-level="70"><div><h3 data-i18n="s4.t">Security fundamentals</h3><p data-i18n="s4.d">Firewalls, updates, and access control.</p></div><div class="bar"><i></i></div></div>
+        <div class="skill" data-type="pro" data-level="95"><div><h3 data-i18n="s5.t">Problem-solving</h3><p data-i18n="s5.d">Breaking big failures into small, testable steps.</p></div><div class="bar"><i></i></div></div>
+        <div class="skill" data-type="pro" data-level="88"><div><h3 data-i18n="s6.t">Communication</h3><p data-i18n="s6.d">Explaining technical issues in plain language.</p></div><div class="bar"><i></i></div></div>
+        <div class="skill" data-type="pro" data-level="82"><div><h3 data-i18n="s7.t">Documentation</h3><p data-i18n="s7.d">Writing clear guides so fixes can be repeated.</p></div><div class="bar"><i></i></div></div>
+        <div class="skill" data-type="pro" data-level="80"><div><h3 data-i18n="s8.t">Time management</h3><p data-i18n="s8.d">Prioritizing urgent outages over routine work.</p></div><div class="bar"><i></i></div></div>
+      </div>
+    </section>
+
+    <!-- ========== TOOLS ========== -->
+    <section id="tools" class="section">
+      <div class="head">
+        <h2 data-i18n="tools.title">System Administration Tools</h2>
+        <p data-i18n="tools.sub">Click a command to copy it.</p>
+      </div>
+      <div class="grid tools">
+        <article class="card tool"><h3>Windows Server</h3><p data-i18n="t1.d">Microsoft's server operating system for Active Directory, file sharing, and group policy.</p><button class="cmd" data-copy="Get-WindowsFeature">Get-WindowsFeature</button></article>
+        <article class="card tool"><h3>Ubuntu Server</h3><p data-i18n="t2.d">A popular, free Linux server system used for web, database, and cloud hosting.</p><button class="cmd" data-copy="sudo apt update && sudo apt upgrade">sudo apt update &amp;&amp; sudo apt upgrade</button></article>
+        <article class="card tool"><h3>PowerShell</h3><p data-i18n="t3.d">A command-line shell and scripting language for automating Windows administration.</p><button class="cmd" data-copy="Get-Service | Where Status -eq Running">Get-Service | Where Status -eq Running</button></article>
+        <article class="card tool"><h3>SSH</h3><p data-i18n="t4.d">Secure Shell lets an administrator safely log in to and control remote machines.</p><button class="cmd" data-copy="ssh admin@192.168.1.10">ssh admin@192.168.1.10</button></article>
+        <article class="card tool"><h3>VirtualBox</h3><p data-i18n="t5.d">Runs virtual machines so you can practice and test systems without risking real ones.</p><button class="cmd" data-copy="VBoxManage list vms">VBoxManage list vms</button></article>
+        <article class="card tool"><h3>Wireshark</h3><p data-i18n="t6.d">Captures and inspects network traffic to diagnose connectivity and security problems.</p><button class="cmd" data-copy="tshark -i eth0 -c 10">tshark -i eth0 -c 10</button></article>
+      </div>
+    </section>
+
+    <!-- ========== TERMINAL ========== -->
+    <section id="terminal" class="section alt">
+      <div class="head">
+        <h2 data-i18n="term.title">Try the Linux command prompt</h2>
+        <p data-i18n="term.sub">A safe, simulated terminal. Type <code>help</code> or tap a command.</p>
+      </div>
+      <div class="term" id="term" aria-label="Linux terminal simulator">
+        <div class="term-bar"><span></span><span></span><span></span><em>admin@ubuntu-server: ~</em></div>
+        <div class="term-body" id="termBody" tabindex="0"></div>
+        <form class="term-form" id="termForm" autocomplete="off">
+          <label for="termInput" id="termPrompt">admin@ubuntu:~$</label>
+          <input id="termInput" type="text" spellcheck="false" autocapitalize="off" aria-label="Type a command">
+        </form>
+      </div>
+      <div class="chips" id="chips">
+        <button>help</button><button>neofetch</button><button>ls</button><button>whoami</button><button>uname -a</button><button>df -h</button><button>free -h</button><button>ip a</button><button>systemctl status ssh</button><button>ping 8.8.8.8</button><button>clear</button>
+      </div>
+    </section>
+
+    <!-- ========== ABOUT ========== -->
+    <section id="about" class="section about">
+      <div class="head"><h2 data-i18n="about.title">About the Developer</h2></div>
+      <div class="about-card">
+        <h3>Ricric P. Liwade</h3>
+        <dl>
+          <dt data-i18n="about.course">Course / Program</dt>
+          <dd>Bachelor of Science in Information Technology</dd>
+        </dl>
+        <p data-i18n="about.intro">Hi! I'm a student who enjoys turning ideas into working websites. I built this portfolio to show what I have learned about systems administration and maintenance.</p>
+        <p data-i18n="about.interest">I am interested in the IT industry because every organization depends on technology that must stay reliable and secure. I want to grow into a role where I help systems and the people who use them work well.</p>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <p>© <span id="year"></span> Ricric P. Liwade · <span data-i18n="foot">Built with HTML, CSS, and JavaScript</span></p>
+    <a href="#home" data-i18n="top">Back to top</a>
+  </footer>
+
+  <div class="toast" id="toast" role="status" aria-live="polite"></div>
+
+  <script src="translations.js"></script>
+  <script src="waves.js"></script>
+  <script src="terminal.js"></script>
+  <script src="main.js"></script>
+</body>
+</html>
